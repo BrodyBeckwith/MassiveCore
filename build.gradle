@@ -1,0 +1,54 @@
+import org.apache.tools.ant.filters.ReplaceTokens
+
+plugins {
+    id 'java'
+    id 'maven-publish'
+    id 'com.github.johnrengelman.shadow' version '5.1.0'
+}
+
+group = 'com.massivecraft.massivecore'
+version = '2.14.4-SNAPSHOT'
+description = '&eMassiveCore is a plugin that contains libraries and features that other plugins make use of. &aCayorion&e from &aMassiveCraft&e is the developer. Feel free to visit us at &bhttps://www.massivecraft.com'
+sourceCompatibility = '12'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven { url = 'https://papermc.io/repo/repository/maven-public/' }
+    maven { url = 'https://jitpack.io' }
+}
+
+dependencies {
+    compileOnly 'com.destroystokyo.paper:paper:1.14.4-R0.1-SNAPSHOT'
+    compileOnly 'com.destroystokyo.paper:paper-api:1.14.4-R0.1-SNAPSHOT'
+    compileOnly 'com.github.MilkBowl:VaultAPI:1.7'
+    compile 'org.mongodb:mongo-java-driver:3.11.0'
+}
+
+shadowJar {
+    relocate 'com.mongodb', 'com.massivecraft.massivecore.xlib.mongodb'
+    relocate 'org.bson', 'com.massivecraft.massivecore.xlib.bson'
+}
+
+tasks.build.dependsOn tasks.shadowJar
+
+tasks.shadowJar.configure {
+    classifier = null
+}
+
+publishing {
+    publications {
+        shadow(MavenPublication) { publication ->
+            project.shadow.component(publication)
+        }
+    }
+}
+
+processResources {
+    filter ReplaceTokens, tokens:[
+            "project.name": project.property("name"),
+            "project.group": project.property("group"),
+            "project.description": project.property("description"),
+            "project.version": project.property("version")
+    ]
+}

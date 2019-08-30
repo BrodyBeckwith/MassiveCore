@@ -104,7 +104,14 @@ local.properties
 .idea/dynamic.xml
 .idea/uiDesigner.xml
 
+# Other
+.idea/compiler.xml
+.idea/encodings.xml
+.idea/misc.xml
+.idea/modules.xml
+
 # Gradle:
+.gradle/
 .idea/gradle.xml
 .idea/libraries
 
