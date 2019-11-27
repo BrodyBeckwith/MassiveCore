@@ -42,7 +42,6 @@ public enum MassiveCorePerm implements Identified
 	BUFFER_WHITESPACE,
 	CMDURL,
 	CONFIG,
-	SPONSOR,
 	CLICK,
 	NOTPDELAY,
 	VARIABLE_BOOK,

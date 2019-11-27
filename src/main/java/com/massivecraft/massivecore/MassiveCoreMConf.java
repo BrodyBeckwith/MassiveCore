@@ -176,14 +176,6 @@ public class MassiveCoreMConf extends Entity<MassiveCoreMConf>
 	public boolean debugEnabled = false;
 	
 	// -------------------------------------------- //
-	// SPONSOR
-	// -------------------------------------------- //
-	// URL connections to http://sponsorinfo.massivecraft.com/
-	
-	public long sponsorUpdateMillis = 0;
-	public boolean sponsorEnabled = true;
-	
-	// -------------------------------------------- //
 	// METRICS
 	// -------------------------------------------- //
 	// URL connections to https://bstats.org
