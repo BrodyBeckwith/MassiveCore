@@ -19,6 +19,7 @@ import com.massivecraft.massivecore.command.type.container.TypeMap;
 import com.massivecraft.massivecore.command.type.container.TypeSet;
 import com.massivecraft.massivecore.command.type.enumeration.TypeBiome;
 import com.massivecraft.massivecore.command.type.enumeration.TypeChatColor;
+import com.massivecraft.massivecore.command.type.enumeration.TypeDamageCause;
 import com.massivecraft.massivecore.command.type.enumeration.TypeDamageModifier;
 import com.massivecraft.massivecore.command.type.enumeration.TypeDifficulty;
 import com.massivecraft.massivecore.command.type.enumeration.TypeDyeColor;
@@ -305,6 +306,7 @@ public class RegistryType
 		// Enum
 		register(TypeBiome.get());
 		register(TypeChatColor.get());
+		register(TypeDamageCause.get());
 		register(TypeDifficulty.get());
 		register(TypeDyeColor.get());
 		register(TypeEntityType.get());
