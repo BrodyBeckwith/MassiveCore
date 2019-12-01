@@ -9,7 +9,11 @@ plugins {
 group = 'com.massivecraft.massivecore'
 version = '2.14.4-SNAPSHOT'
 description = '&eMassiveCore is a plugin that contains libraries and features that other plugins make use of. &aCayorion&e from &aMassiveCraft&e is the developer. Feel free to visit us at &bhttps://www.massivecraft.com'
-sourceCompatibility = '12'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
 
 repositories {
     mavenLocal()
