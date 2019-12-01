@@ -1,6 +1,8 @@
 name: @project.name@
-authors: [Cayorion]
-website: https://www.massivecraft.com/massivecore
+authors:
+  - Cayorion
+  - BrodyBeckwith
+website: https://github.com/BrodyBeckwith/MassiveCore
 description: @project.description@
 main: @project.group@.@project.name@
 version: @project.version@

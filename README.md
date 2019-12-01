@@ -6,17 +6,18 @@ storage, command creation, and more.
 #### Requirements
 * Git
 * JDK 8+
+* [Paper 1.14.4](https://github.com/PaperMC/Paper/) installed in your local Maven repository
 
 ```
 git clone https://github.com/BrodyBeckwith/MassiveCore.git
 cd MassiveCore
 ./gradlew build
 ```
-The built jar will be in `build/libs/`
+The built jar will be in `build/libs/`.
 
 ## Usage
-MassiveCore does not have a remote maven repository where builds are stored so before adding it as a dependency in one of 
-your plugins you must run `./gradlew publishToMavenLocal` to install it to your local maven repository
+MassiveCore does not have a remote maven repository where builds are stored so before adding it as a dependency in one 
+of your plugins you must run `./gradlew publishToMavenLocal` to install it to your local maven repository.
 #### Gradle
 ```
 repositories {
