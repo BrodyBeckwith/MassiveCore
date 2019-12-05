@@ -71,7 +71,6 @@ import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
-import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -1316,28 +1315,28 @@ public class MUtil
 		Material.DIAMOND_SHOVEL
 	);
 			
-	public static boolean isSHOVEL(Material material)
+	public static boolean isShovel(Material material)
 	{
 		return SHOVEL_MATERIALS.contains(material);
 	}
 		
-	public static boolean isSHOVEL(ItemStack item)
+	public static boolean isShovel(ItemStack item)
 	{
 		if (item == null) return false;
-		return isSHOVEL(item.getType());
+		return isShovel(item.getType());
 	}
 			
-	public static boolean isSHOVEL(Entity entity)
+	public static boolean isShovel(Entity entity)
 	{
 		if (entity == null) return false;
 		if (!(entity instanceof LivingEntity)) return false;
 		LivingEntity lentity = (LivingEntity)entity;
-		return isSHOVEL(lentity.getEquipment().getItemInHand());
+		return isShovel(lentity.getEquipment().getItemInHand());
 	}
 			
-	public static boolean isSHOVEL(BlockBreakEvent event)
+	public static boolean isShovel(BlockBreakEvent event)
 	{
-		return isSHOVEL(InventoryUtil.getWeapon(event.getPlayer()));
+		return isShovel(InventoryUtil.getWeapon(event.getPlayer()));
 	}
 		
 	// -------------------------------------------- //
