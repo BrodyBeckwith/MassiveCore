@@ -11,7 +11,7 @@ import com.massivecraft.massivecore.predicate.Predicate;
 import com.massivecraft.massivecore.predicate.PredicateStringStartsWith;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
-import org.bukkit.craftbukkit.v1_14_R1.inventory.CraftInventoryCustom;
+import org.bukkit.craftbukkit.v1_15_R1.inventory.CraftInventoryCustom;
 import org.bukkit.entity.HumanEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryAction;

@@ -4,9 +4,8 @@ storage, command creation, and more.
 
 ## Building
 #### Requirements
-* Git
 * JDK 8+
-* [Paper 1.14.4](https://github.com/PaperMC/Paper/) installed in your local Maven repository
+* [Spigot 1.15](https://www.spigotmc.org/) installed in your local Maven repository
 
 ```
 git clone https://github.com/BrodyBeckwith/MassiveCore.git
@@ -25,7 +24,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly 'com.massivecraft.massivecore:MassiveCore:2.14.4-SNAPSHOT'
+    compileOnly 'com.massivecraft.massivecore:MassiveCore:2.15-SNAPSHOT'
 }
 ```
 #### Maven

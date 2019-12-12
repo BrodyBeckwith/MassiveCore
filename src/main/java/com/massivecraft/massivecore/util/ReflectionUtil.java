@@ -30,21 +30,6 @@ public class ReflectionUtil
 	// CONSTANTS
 	// -------------------------------------------- //
 	
-	private static Field FIELD_DOT_MODIFIERS;
-	
-	static
-	{
-		try
-		{
-			FIELD_DOT_MODIFIERS = Field.class.getDeclaredField("modifiers");
-			FIELD_DOT_MODIFIERS.setAccessible(true);
-		}
-		catch (Exception e)
-		{
-			e.printStackTrace();
-		}
-	}
-	
 	private static final Class<?>[] EMPTY_ARRAY_OF_CLASS = {};
 	private static final Object[] EMPTY_ARRAY_OF_OBJECT = {};
 	

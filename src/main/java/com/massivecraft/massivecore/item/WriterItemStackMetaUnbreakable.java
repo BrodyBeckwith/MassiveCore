@@ -36,7 +36,7 @@ public class WriterItemStackMetaUnbreakable extends WriterAbstractItemStackMetaF
 	public Boolean getB(ItemMeta cb, ItemStack d)
 	{
 		try {
-			return cb.spigot().isUnbreakable();
+			return cb.isUnbreakable();
 		} catch (UnsupportedOperationException ignored) {
 			return false;
 		}
@@ -46,7 +46,7 @@ public class WriterItemStackMetaUnbreakable extends WriterAbstractItemStackMetaF
 	public void setB(ItemMeta cb, Boolean fb, ItemStack d)
 	{
 		try {
-			cb.spigot().setUnbreakable(fb);
+			cb.setUnbreakable(fb);
 		} catch (UnsupportedOperationException ignored) {
 			// ignored
 		}
