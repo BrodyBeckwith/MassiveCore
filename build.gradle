@@ -1,13 +1,13 @@
 import org.apache.tools.ant.filters.ReplaceTokens
 
 plugins {
-    id 'java'
+    id 'java-library'
     id 'maven-publish'
     id 'com.github.johnrengelman.shadow' version '5.2.0'
 }
 
 group = 'com.massivecraft.massivecore'
-version = '2.15-SNAPSHOT'
+version = '2.15.2-SNAPSHOT'
 description = 'MassiveCore is a plugin that contains libraries and features that other plugins make use of.'
 
 java {
@@ -23,18 +23,19 @@ repositories {
 }
 
 dependencies {
-    compileOnly 'org.spigotmc:spigot:1.15-R0.1-SNAPSHOT'
-    compileOnly 'org.spigotmc:spigot-api:1.15-R0.1-SNAPSHOT'
-    compileOnly 'com.github.MilkBowl:VaultAPI:1.7'
-    compile 'org.mongodb:mongo-java-driver:3.11.0'
+    implementation 'org.spigotmc:spigot:1.15.2-R0.1-SNAPSHOT'
+    implementation 'org.spigotmc:spigot-api:1.15.2-R0.1-SNAPSHOT'
+    implementation 'com.github.MilkBowl:VaultAPI:1.7'
+    shadow 'org.mongodb:mongo-java-driver:3.11.0'
 }
 
 shadowJar {
+    configurations = [project.configurations.shadow]
     relocate 'com.mongodb', 'com.massivecraft.massivecore.xlib.mongodb'
     relocate 'org.bson', 'com.massivecraft.massivecore.xlib.bson'
 }
 
-tasks.build.dependsOn tasks.shadowJar
+tasks.build.dependsOn(tasks.shadowJar)
 
 tasks.shadowJar.configure {
     classifier = null
